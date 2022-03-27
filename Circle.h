@@ -60,7 +60,8 @@ class Circle
                 if(this->Diameter==0)
                 {
                     this->setRay();
-                } }
+                } 
+            }
             return this->Diameter = 2 * this->Radium;
         }   
 
