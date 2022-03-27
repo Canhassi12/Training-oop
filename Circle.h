@@ -8,44 +8,106 @@ using namespace std;
 class Circle
 {
     private:
-        float Ray;
-        float Diameter;
+        float Radium =0;
+        float Diameter =0;
         float Pi;
-        float Area;
-        
+        float Area=0;
+
     public:
-        Circle(float Ray)
+        Circle()
         {
-           this->Diameter = 2 * Ray;
-           this->Pi = 3.14;
-           this->Ray = Ray;
+            this->Pi = 3.14;
         }
-        void setRay(float ray)
+        void setRay()
         {
-            this->Ray = ray;
+            cout<<"type the radium"<<endl;
+            cin>>this->Radium;
         }
         float getRay()
         {
-            return this->Ray;
+            if (this->Radium!=0)
+            {
+                return this->Radium;
+            }
+            else
+            {
+                if(this->Radium==0)
+                {
+                    this->setDiameter();
+                }
+                return this->Radium = this->Diameter / 2;
+            }
         }
 
+
+
+
+
+
+        void setDiameter()
+        {
+            cout<<"type the diameter" <<endl;
+            cin>>this->Diameter;
+        }
         float getDiameter()
         {
-            return this->Diameter;
-        }
+            if(this->Diameter!=0)
+            {
+                return this->Diameter;
+            }
+            else
+            {
+                if(this->Diameter==0)
+                {
+                    this->setRay();
+                } }
+            return this->Diameter = 2 * this->Radium;
+        }   
+
+
+
+
 
         float getPi()
         {
             return this->Pi;
         }
+
+
+
+
         void setArea()
         {
-            this->Area = this->Pi * pow(this->Ray, 2);
+            cout<<"type the area: " <<endl;
+            cin>>this->Area;
         }
 
         float getArea()
         {
-            return this->Area;
-        }  
-};
+            if(this->Area!=0)
+            {
+                return this->Area;
+            }
+            
+            else
+            {
+               if(this->Radium==0)
+               {
+                  this->setRay();
+               }
+            }
+            return this->Pi * pow (this->Radium, 2);
+        } 
+
+
+
+
+
+
+
+
+
+
+};      
+
 #endif

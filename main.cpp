@@ -6,11 +6,27 @@ using namespace std;
 
 int main()
 {
-    Circle c1(12);
-    c1.setArea();
+    Circle c1; 
+
+   //c1.setArea(); 
+  //cout<<"the area is "<<c1.getArea(); 
+
+  //c1.setDiameter();  
+  //cout<<"the diameter is "<<c1.getDiameter() <<endl;
+
+  //c1.setRay();
+  //cout<<"the ray is "<<c1.getRay() <<endl;
+   
     
+
+     
+
+ 
+
     
-    cout << c1.getDiameter()<<endl;
-    cout << c1.getArea()<<endl;
+
+
+
+    
     return 0;
 }
